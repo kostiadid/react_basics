@@ -1,12 +1,13 @@
 import './App.css';
+import Header from './components/Header';
 
-function App() {
+export default  function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to My App</h1>
-        <button>Click Me</button>
-      </header>
+      <Header />
     </div>
   );
 }
+
+
+
