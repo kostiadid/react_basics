@@ -1,15 +1,10 @@
-import logo from './favicon.svg'
-
-
-
-function MenuItem({title}){
-    return(
-        <li>{title}</li>
-    )
-}
+import logo from '/favicon.svg'
+import MenuItem from './MenuItem/MenuItem.jsx'
 
 export default function Header(){
   
+    const data = ['Home', 'About', 'Contact']
+
   return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -17,9 +12,9 @@ export default function Header(){
         <button>Click Me</button>
 
         <ul>
-          <MenuItem title="Home" />
-          <MenuItem title="About" />
-          <MenuItem title="Contact" />
+          <MenuItem >{data[0]}</MenuItem>
+          <MenuItem >{data[1]}</MenuItem>
+          <MenuItem >{data[2]}</MenuItem>
         </ul>
 
       </header>
