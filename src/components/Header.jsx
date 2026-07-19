@@ -1,9 +1,13 @@
 import logo from '/favicon.svg'
 import MenuItem from './MenuItem/MenuItem.jsx'
 
+const data = ['Home', 'About', 'Contact']
 export default function Header(){
   
-    const data = ['Home', 'About', 'Contact']
+  function handleClick(){
+        console.log(`You clicked on ${children}`)
+    }
+
 
   return (
       <header className="App-header">
@@ -12,9 +16,9 @@ export default function Header(){
         <button>Click Me</button>
 
         <ul>
-          <MenuItem >{data[0]}</MenuItem>
-          <MenuItem >{data[1]}</MenuItem>
-          <MenuItem >{data[2]}</MenuItem>
+          <MenuItem onClick={handleClick}>{data[0]}</MenuItem>
+          <MenuItem onClick={handleClick}>{data[1]}</MenuItem>
+          <MenuItem onClick={handleClick}>{data[2]}</MenuItem>
         </ul>
 
       </header>

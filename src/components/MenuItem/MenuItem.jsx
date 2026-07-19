@@ -1,13 +1,10 @@
 import './MenuItem.css'
 
-export default function MenuItem({children}){
+export default function MenuItem({children, onClick}){
 
-    function handleClick(){
-        console.log(`You clicked on ${children}`)
-    }
 
     return(
-        <li className="button" onClick={handleClick}>{children}</li>
+        <li className="button" onClick={onClick}>{children}</li>
     )
 }
 
