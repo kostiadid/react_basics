@@ -1,8 +1,27 @@
+import logo from './favicon.svg'
+
+
+
+function MenuItem(props){
+    return(
+        <li>{props.title}</li>
+    )
+}
+
 export default function Header(){
+  
   return (
       <header className="App-header">
-        <h1>Welcome to My App</h1>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>{}</h1>
         <button>Click Me</button>
+
+        <ul>
+          <MenuItem title="Home" />
+          <MenuItem title="About" />
+          <MenuItem title="Contact" />
+        </ul>
+
       </header>
   )
 }
