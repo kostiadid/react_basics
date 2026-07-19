@@ -2,9 +2,9 @@ import logo from './favicon.svg'
 
 
 
-function MenuItem(props){
+function MenuItem({title}){
     return(
-        <li>{props.title}</li>
+        <li>{title}</li>
     )
 }
 
