@@ -3,9 +3,17 @@ import MenuItem from './MenuItem/MenuItem.jsx'
 import {useState} from 'react'
 
 const data = ['Home', 'About', 'Contact']
+const textOnPage = {
+    'btn1': 'You clicked on Home',
+    'btn2': 'You clicked on About',
+    'btn3': 'You clicked on Contact'
+
+}
+
+
 export default function Header(){
   
-  const [content, setContent] = useState('')
+  const [content, setContent] = useState('text')
   const [time,setTime] = useState(new Date())
   setInterval(()=>setTime(new Date()),1000)
 
@@ -28,7 +36,7 @@ export default function Header(){
           <MenuItem onClick={()=>handleClick('btn3',data[2])}>{data[2]}</MenuItem>
         </ul>
 
-        <p>{content}</p>
+        <p>{textOnPage[content]||'Please select an option'}</p>
       </header>
   )
 }
