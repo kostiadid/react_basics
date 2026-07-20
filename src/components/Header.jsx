@@ -6,7 +6,10 @@ const data = ['Home', 'About', 'Contact']
 export default function Header(){
   
   const [content, setContent] = useState('')
-  
+  const [time,setTime] = useState(new Date())
+  setInterval(()=>setTime(new Date()),1000)
+
+
   function handleClick( type,children){
         console.log(`You clicked on ${children}`, type)
         setContent(type)
@@ -16,7 +19,7 @@ export default function Header(){
   return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>{}</h1>
+        <h1>{time.toLocaleTimeString()}</h1>
         <button>Click Me</button>
 
         <ul>
