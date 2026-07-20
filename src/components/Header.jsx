@@ -4,8 +4,8 @@ import MenuItem from './MenuItem/MenuItem.jsx'
 const data = ['Home', 'About', 'Contact']
 export default function Header(){
   
-  function handleClick(){
-        console.log(`You clicked on ${children}`)
+  function handleClick( type,children){
+        console.log(`You clicked on ${children}`, type)
     }
 
 
@@ -16,9 +16,9 @@ export default function Header(){
         <button>Click Me</button>
 
         <ul>
-          <MenuItem onClick={handleClick}>{data[0]}</MenuItem>
-          <MenuItem onClick={handleClick}>{data[1]}</MenuItem>
-          <MenuItem onClick={handleClick}>{data[2]}</MenuItem>
+          <MenuItem onClick={()=>handleClick('btn1',data[0])}>{data[0]}</MenuItem>
+          <MenuItem onClick={()=>handleClick('btn2',data[1])}>{data[1]}</MenuItem>
+          <MenuItem onClick={()=>handleClick('btn3',data[2])}>{data[2]}</MenuItem>
         </ul>
 
       </header>
