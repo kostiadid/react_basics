@@ -1,11 +1,15 @@
 import logo from '/favicon.svg'
 import MenuItem from './MenuItem/MenuItem.jsx'
+import {useState} from 'react'
 
 const data = ['Home', 'About', 'Contact']
 export default function Header(){
   
+  const [content, setContent] = useState('')
+  
   function handleClick( type,children){
         console.log(`You clicked on ${children}`, type)
+        setContent(type)
     }
 
 
@@ -21,6 +25,7 @@ export default function Header(){
           <MenuItem onClick={()=>handleClick('btn3',data[2])}>{data[2]}</MenuItem>
         </ul>
 
+        <p>{content}</p>
       </header>
   )
 }
